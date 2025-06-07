@@ -30,4 +30,97 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         observer.observe(section);
     });
+});// Add these to your script.js file
+
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const header = document.querySelector('header');
+    
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', function() {
+            header.classList.toggle('mobile-menu-active');
+        });
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (header.classList.contains('mobile-menu-active') && 
+            !event.target.closest('header')) {
+            header.classList.remove('mobile-menu-active');
+        }
+    });
+    
+    // Close mobile menu when clicking a nav link
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            header.classList.remove('mobile-menu-active');
+        });
+    });
 });
+
+// Enhanced scroll animation
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15, rootMargin: "0px 0px -100px 0px" });
+    
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+    
+    // Add visible class to hero section immediately
+    const heroSection = document.querySelector('#hero');
+    if (heroSection) {
+        setTimeout(() => {
+            heroSection.classList.add('visible');
+        }, 100);
+    }
+});
+
+// Add active class to current section in navigation
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Typed.js effect for hero section (optional - requires external library)
+// Add this script tag in your HTML: <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+// Then uncomment this:
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Typed !== 'undefined') {
+        new Typed('#typed-text', {
+            strings: ['DevOps Engineer', 'Site Reliability Expert', 'Cloud Architect'],
+            typeSpeed: 70,
+            backSpeed: 50,
+            loop: true
+        });
+    }
+});
+*/
