@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohannad Saad - DevOps & SRE Professional Portfolio">
+    <meta name="keywords" content="DevOps, SRE, Cloud, Infrastructure, Automation, CI/CD">
+    <meta name="author" content="Mohannad Saad">
     <title>Mohannad Saad</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -14,18 +18,28 @@
             <div class="logo">Mohannad Saad</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="mobile-menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <section id="hero">
         <div class="container">
             <h1>Hi, I'm <span class="highlight">Mohannad Saad</span></h1>
-            <p class="tagline">Devops & SRE</p>
-            <a href="#contact" class="cta-button">Get In Touch</a>
+            <p class="tagline">DevOps Engineer & Site Reliability Expert</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">Get In Touch</a>
+                <a href="CV.pdf" class="cta-button secondary" download><i class="fas fa-download"></i> Download CV</a>
+            </div>
         </div>
     </section>
 
@@ -34,8 +48,71 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Skilled Individual with hands-on experience supporting, automating, and optimizing mission critical
-                        deployments, leveraging configuration management, CI/CD, and DevOps processes.</p>
+                    <p>Skilled DevOps Engineer with hands-on experience supporting, automating, and optimizing mission-critical deployments, leveraging configuration management, CI/CD, and DevOps processes.</p>
+                    <p>I specialize in building resilient infrastructure, implementing monitoring solutions, and streamlining development workflows to enhance productivity and system reliability.</p>
+                    <p>My goal is to bridge the gap between development and operations, fostering a culture of continuous improvement and collaboration.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-server"></i>
+                            <h3>Infrastructure as Code</h3>
+                            <p>Automating infrastructure using Terraform, CloudFormation, and Ansible</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>CI/CD Pipelines</h3>
+                            <p>Building efficient delivery pipelines with Jenkins, GitHub Actions, and ArgoCD</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h3>Monitoring & Observability</h3>
+                            <p>Implementing robust monitoring solutions with Prometheus, Grafana, and ELK stack</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior DevOps Engineer</h3>
+                        <p class="company">ACME Technologies</p>
+                        <ul>
+                            <li>Designed and implemented multi-environment Kubernetes clusters on AWS, reducing deployment time by 70%</li>
+                            <li>Automated infrastructure provisioning with Terraform, achieving 100% infrastructure-as-code coverage</li>
+                            <li>Built comprehensive monitoring and alerting systems using Prometheus and Grafana</li>
+                            <li>Lead a team of 5 engineers in implementing GitOps practices across the organization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2022</div>
+                    <div class="timeline-content">
+                        <h3>DevOps Engineer</h3>
+                        <p class="company">Tech Solutions Inc.</p>
+                        <ul>
+                            <li>Implemented CI/CD pipelines using Jenkins, reducing release cycles from weeks to days</li>
+                            <li>Containerized legacy applications using Docker, improving scalability and portability</li>
+                            <li>Automated application deployment processes with Ansible, reducing manual errors by 90%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>Systems Administrator</h3>
+                        <p class="company">Global Services Ltd.</p>
+                        <ul>
+                            <li>Managed and maintained Linux-based infrastructure across multiple data centers</li>
+                            <li>Implemented backup and disaster recovery solutions, ensuring 99.9% system availability</li>
+                            <li>Automated routine maintenance tasks with Bash and Python scripts</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,8 +125,68 @@
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-info">
-                        <h3>Project Name</h3>
-                        <p>Project description goes here. Explain what this project does, the technologies used, and your role.</p>
+                        <h3>CI/CD Pipeline Automation</h3>
+                        <p>Designed and implemented a robust CI/CD pipeline using Jenkins, GitHub Actions, and ArgoCD that reduced deployment time by 70% while enhancing code quality through automated testing.</p>
+                        <div class="tech-stack">
+                            <span>Jenkins</span>
+                            <span>GitHub Actions</span>
+                            <span>ArgoCD</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Kubernetes Infrastructure Automation</h3>
+                        <p>Implemented Infrastructure as Code using Terraform and Ansible to automate the provisioning and configuration of multi-environment Kubernetes clusters on AWS, ensuring 99.9% uptime.</p>
+                        <div class="tech-stack">
+                            <span>Terraform</span>
+                            <span>Ansible</span>
+                            <span>Kubernetes</span>
+                            <span>AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Monitoring & Observability Platform</h3>
+                        <p>Built a comprehensive monitoring solution using Prometheus, Grafana, and ELK stack providing real-time visibility into system performance and enabling automated incident response.</p>
+                        <div class="tech-stack">
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
+                            <span>ELK Stack</span>
+                            <span>AlertManager</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Application Containerization & Migration</h3>
+                        <p>Containerized legacy applications using Docker and orchestrated them with Kubernetes, improving scalability and reducing deployment issues by 90% while maintaining backward compatibility.</p>
+                        <div class="tech-stack">
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>Helm</span>
+                            <span>Microservices</span>
+                        </div>
                         <div class="project-links">
                             <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
                             <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
@@ -62,36 +199,138 @@
 
     <section id="skills">
         <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill">Kubernetes</div>
-                <div class="skill">Jenkins</div>
-                <div class="skill">GitLab</div>
-                <div class="skill">FluxCD</div>
-                <div class="skill">Docker</div>
-                <div class="skill">Terraform</div>
-                <div class="skill">Ansible</div>
-                <div class="skill">Prometheus</div>
-                <div class="skill">Grafana</div>
-                <div class="skill">Helm</div>
+            <h2>Technical Skills</h2>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <div class="skills-container">
+                        <div class="skill"><i class="fab fa-aws"></i> AWS</div>
+                        <div class="skill"><i class="fab fa-google"></i> GCP</div>
+                        <div class="skill"><i class="fab fa-microsoft"></i> Azure</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Containerization & Orchestration</h3>
+                    <div class="skills-container">
+                        <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+                        <div class="skill"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
+                        <div class="skill"><i class="fas fa-cloud"></i> OpenShift</div>
+                        <div class="skill"><i class="fas fa-ship"></i> Helm</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>CI/CD & Version Control</h3>
+                    <div class="skills-container">
+                        <div class="skill"><i class="fab fa-jenkins"></i> Jenkins</div>
+                        <div class="skill"><i class="fab fa-github-alt"></i> GitHub Actions</div>
+                        <div class="skill"><i class="fab fa-gitlab"></i> GitLab CI</div>
+                        <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
+                        <div class="skill"><i class="fas fa-code-branch"></i> ArgoCD</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Infrastructure as Code</h3>
+                    <div class="skills-container">
+                        <div class="skill"><i class="fas fa-th"></i> Terraform</div>
+                        <div class="skill"><i class="fas fa-file-code"></i> CloudFormation</div>
+                        <div class="skill"><i class="fas fa-cogs"></i> Ansible</div>
+                        <div class="skill"><i class="fas fa-puppet"></i> Puppet</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Monitoring & Observability</h3>
+                    <div class="skills-container">
+                        <div class="skill"><i class="fas fa-chart-line"></i> Prometheus</div>
+                        <div class="skill"><i class="fas fa-tachometer-alt"></i> Grafana</div>
+                        <div class="skill"><i class="fas fa-search"></i> ELK Stack</div>
+                        <div class="skill"><i class="fas fa-heartbeat"></i> Datadog</div>
+                        <div class="skill"><i class="fas fa-broadcast-tower"></i> New Relic</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Programming & Scripting</h3>
+                    <div class="skills-container">
+                        <div class="skill"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill"><i class="fas fa-terminal"></i> Bash</div>
+                        <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+                        <div class="skill"><i class="fab fa-golang"></i> Go</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+
+                
+                <div class="certification">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certified Kubernetes Administrator (CKA)</h3>
+                    <p>Cloud Native Computing Foundation</p>
+                </div>
+                
+                <div class="certification">
+                    <i class="fab fa-redhat"></i>
+                    <h3>Red Hat Certified Engineer (RHCE)</h3>
+                    <p>Red Hat</p>
+                </div>
+                <div class="certification">
+                    <i class="fas fa-dharmachakra"></i>
+                    <h3>Certified Kubernetes Developer (CKAD)</h3>
+                    <p>Cloud Native Computing Foundation</p>
+                    <div class="cert-date">Issued: 2022</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>Feel free to reach out if you'd like to collaborate or have any questions:</p>
+            <p>Interested in working together or have any questions? Feel free to reach out!</p>
             <div class="contact-info">
                 <a href="mailto:mohannedsa@hotmail.com"><i class="fas fa-envelope"></i> mohannedsa@hotmail.com</a>
                 <a href="https://github.com/mohannedsa" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://www.linkedin.com/in/mohannad-abuhussain/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
+            
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Mohannad. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">Mohannad Saad</div>
+                <div class="footer-social">
+                    <a href="mailto:mohannedsa@hotmail.com"><i class="fas fa-envelope"></i> mohannedsa@hotmail.com</a>
+                    <a href="https://github.com/mohannedsa" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/mohannad-abuhussain/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+            <p>&copy; 2025 Mohannad Saad. All rights reserved.</p>
         </div>
     </footer>
 </body>
