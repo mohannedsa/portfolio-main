@@ -1,39 +1,6 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 70,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Simple animation for elements when they come into view
+// Document ready handler for all initialization
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-    
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-});// Add these to your script.js file
-
-// Mobile menu toggle
-document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const header = document.querySelector('header');
     
@@ -51,17 +18,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Close mobile menu when clicking a nav link
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            header.classList.remove('mobile-menu-active');
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu when clicking a link
+                header.classList.remove('mobile-menu-active');
+            }
         });
     });
-});
-
-// Enhanced scroll animation
-document.addEventListener('DOMContentLoaded', function() {
+    
+    // Enhanced scroll animation
     const sections = document.querySelectorAll('section');
     
     const observer = new IntersectionObserver((entries) => {
@@ -108,19 +85,3 @@ window.addEventListener('scroll', function() {
         }
     });
 });
-
-// Typed.js effect for hero section (optional - requires external library)
-// Add this script tag in your HTML: <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-// Then uncomment this:
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    if (typeof Typed !== 'undefined') {
-        new Typed('#typed-text', {
-            strings: ['DevOps Engineer', 'Site Reliability Expert', 'Cloud Architect'],
-            typeSpeed: 70,
-            backSpeed: 50,
-            loop: true
-        });
-    }
-});
-*/
